@@ -1,0 +1,25 @@
+To login into mysql container of docker
+First run the mysql container
+Then type below command
+docker exec -it mysql_container mysql -u root -p
+
+Docker ps(to view the running container)
+
+Remove all images
+docker rmi -f $(docker images -a -q)
+
+Remove all containers
+* docker stop $(docker ps -a -q)(stop all container)
+* docker rm $(docker ps -a -q)(remove all container)
+
+Enter container in bash
+docker exec -it backend_container bash
+
+CREATE TABLE USER (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+email VARCHAR(50)
+)
+
+https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications
